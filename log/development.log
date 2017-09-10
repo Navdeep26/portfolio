@@ -908,3 +908,261 @@ Processing by PortfoliosController#index as HTML
   [1m[36mPortfolio Load (0.4ms)[0m  [1mSELECT "portfolios".* FROM "portfolios"[0m
   Rendered portfolios/index.html.erb within layouts/application (3.1ms)
 Completed 200 OK in 27ms (Views: 25.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/portfolios" for ::1 at 2017-09-10 17:06:51 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PortfoliosController#index as HTML
+  [1m[35mPortfolio Load (0.7ms)[0m  SELECT "portfolios".* FROM "portfolios"
+  Rendered portfolios/index.html.erb within layouts/application (42.0ms)
+Completed 500 Internal Server Error in 62ms (ActiveRecord: 3.0ms)
+
+ActionView::Template::Error (undefined method `show_portfolio_path' for #<#<Class:0x007febff352d78>:0x007febff34a5b0>):
+    3: <%= link_to "Create new portfolio item", new_portfolio_path %>
+    4: 
+    5: <% @portfolio_items.each do |portfolio_item| %>
+    6:   <p><%= link_to portfolio_item.title, show_portfolio_path(portfolio_item) %></p>
+    7:   <p><%= portfolio_item.subtitle %></p>
+    8:   <p><%= portfolio_item.body %></p>
+    9:   <p><%= image_tag portfolio_item.thumb_image unless portfolio_item.thumb_image.nil? %></p>
+  app/views/portfolios/index.html.erb:6:in `block in _app_views_portfolios_index_html_erb___233104440603271401_70325787729620'
+  app/views/portfolios/index.html.erb:5:in `_app_views_portfolios_index_html_erb___233104440603271401_70325787729620'
+
+
+  Rendered /Users/navdeepkumar/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.2ms)
+  Rendered /Users/navdeepkumar/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /Users/navdeepkumar/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/navdeepkumar/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (74.7ms)
+  Rendered /Users/navdeepkumar/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/navdeepkumar/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/navdeepkumar/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/navdeepkumar/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/navdeepkumar/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (69.4ms)
+  Rendered /Users/navdeepkumar/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/navdeepkumar/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/navdeepkumar/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (148.0ms)
+
+
+Started GET "/portfolios" for ::1 at 2017-09-10 17:11:37 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PortfoliosController#index as HTML
+  [1m[35mPortfolio Load (0.6ms)[0m  SELECT "portfolios".* FROM "portfolios"
+  Rendered portfolios/index.html.erb within layouts/application (40.9ms)
+Completed 500 Internal Server Error in 66ms (ActiveRecord: 3.6ms)
+
+ActionView::Template::Error (undefined method `show_portfolio_path' for #<#<Class:0x007fde29ee77f8>:0x007fde29edf058>):
+    3: <%= link_to "Create new portfolio item", new_portfolio_path %>
+    4: 
+    5: <% @portfolio_items.each do |portfolio_item| %>
+    6:   <p><%= link_to portfolio_item.title, show_portfolio_path(portfolio_item) %></p>
+    7:   <p><%= portfolio_item.subtitle %></p>
+    8:   <p><%= portfolio_item.body %></p>
+    9:   <p><%= image_tag portfolio_item.thumb_image unless portfolio_item.thumb_image.nil? %></p>
+  app/views/portfolios/index.html.erb:6:in `block in _app_views_portfolios_index_html_erb__4014454428633670736_70296081359920'
+  app/views/portfolios/index.html.erb:5:in `_app_views_portfolios_index_html_erb__4014454428633670736_70296081359920'
+
+
+  Rendered /Users/navdeepkumar/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.1ms)
+  Rendered /Users/navdeepkumar/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendered /Users/navdeepkumar/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/navdeepkumar/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (87.0ms)
+  Rendered /Users/navdeepkumar/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/navdeepkumar/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/navdeepkumar/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/navdeepkumar/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/navdeepkumar/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (61.3ms)
+  Rendered /Users/navdeepkumar/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/navdeepkumar/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/navdeepkumar/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (136.7ms)
+
+
+Started GET "/portfolios" for ::1 at 2017-09-10 17:11:58 +0530
+Processing by PortfoliosController#index as HTML
+  [1m[36mPortfolio Load (0.4ms)[0m  [1mSELECT "portfolios".* FROM "portfolios"[0m
+  Rendered portfolios/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 277ms (Views: 276.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/portfolios/1/edit" for ::1 at 2017-09-10 17:12:06 +0530
+Processing by PortfoliosController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPortfolio Load (0.3ms)[0m  SELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered portfolios/edit.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 44ms (Views: 34.3ms | ActiveRecord: 0.6ms)
+
+
+Started PATCH "/portfolios/1" for ::1 at 2017-09-10 17:12:11 +0530
+Processing by PortfoliosController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OxISB9CwFQl1ZINzp0kNHOazK2LseNolhEym0oH6ZBMKJUBnnKKiFwLSm+Mv63o5jNfHVQa/yi9Mt+Q76Zp0BQ==", "portfolio"=>{"title"=>"My Portfolio Items: number 0", "subtitle"=>"My Greate Servicee", "body"=>"luctus felis volutpat eros aliquet varius! Pellentesque et tempor ligula. Donec ac accumsan diam! Maecenas suscipit et est vitae tincidunt. Curabitur volutpat tincidunt vestibulum. Aliquam erat volutpat. Nunc sodales tellus nisi, a ornare justo consequat eget! Proin in lacinia magna? Nunc in sodales nulla. Vivamus malesuada magna turpis, sed ultrices est tempor vel. Morbi consequat risus laoreet magna dapibus condimentum. Mauris ornare nisl vitae est ultricies, nec tincidunt lectus vehicula. Maecenas tristique velit a aliquam semper. Cras sollicitudin eros urna, in dapibus nisi luctus sit amet. Praesent a varius augue. Duis porta imperdiet mauris eget congue.        Aliquam at pellentesque mauris. Praesent bibendum quam non tellus suscipit interdum. Nunc a justo non enim mollis porta nec id augue. Nunc at mi id enim imperdiet ornare in in ex. Vestibulum eget massa risus. Integer viverra tellus eu facilisis cursus. Morbi mi orci; laoreet venenatis eros at, mollis mollis nisl.        Vestibulum sit amet dui turpis. Aenean accumsan quam eu dui egestas sodales. Suspendisse sagittis quam eget nibh tincidunt, accumsan bibendum diam maximus. Maecenas neque nunc, iaculis et molestie ac, eleifend vel erat! Etiam interdum velit in dolor euismod, vitae aliquam sem pharetra. Curabitur porttitor euismod tincidunt. Vivamus ultrices, nisi sit amet fringilla imperdiet, ex mauris dapibus nisi, at rutrum felis metus maximus ex? Curabitur mattis nisi nec molestie pharetra? Cras aliquet gravida eros sit amet hendrerit? Cras placerat, justo ac porta imperdiet; purus metus sagittis justo, id finibus dolor purus et dolor."}, "commit"=>"Update Portfolio", "id"=>"1"}
+  [1m[36mPortfolio Load (0.3ms)[0m  [1mSELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "portfolios" SET "subtitle" = $1, "body" = $2, "updated_at" = $3 WHERE "portfolios"."id" = $4[0m  [["subtitle", "My Greate Servicee"], ["body", "luctus felis volutpat eros aliquet varius! Pellentesque et tempor ligula. Donec ac accumsan diam! Maecenas suscipit et est vitae tincidunt. Curabitur volutpat tincidunt vestibulum. Aliquam erat volutpat. Nunc sodales tellus nisi, a ornare justo consequat eget! Proin in lacinia magna? Nunc in sodales nulla. Vivamus malesuada magna turpis, sed ultrices est tempor vel. Morbi consequat risus laoreet magna dapibus condimentum. Mauris ornare nisl vitae est ultricies, nec tincidunt lectus vehicula. Maecenas tristique velit a aliquam semper. Cras sollicitudin eros urna, in dapibus nisi luctus sit amet. Praesent a varius augue. Duis porta imperdiet mauris eget congue.        Aliquam at pellentesque mauris. Praesent bibendum quam non tellus suscipit interdum. Nunc a justo non enim mollis porta nec id augue. Nunc at mi id enim imperdiet ornare in in ex. Vestibulum eget massa risus. Integer viverra tellus eu facilisis cursus. Morbi mi orci; laoreet venenatis eros at, mollis mollis nisl.        Vestibulum sit amet dui turpis. Aenean accumsan quam eu dui egestas sodales. Suspendisse sagittis quam eget nibh tincidunt, accumsan bibendum diam maximus. Maecenas neque nunc, iaculis et molestie ac, eleifend vel erat! Etiam interdum velit in dolor euismod, vitae aliquam sem pharetra. Curabitur porttitor euismod tincidunt. Vivamus ultrices, nisi sit amet fringilla imperdiet, ex mauris dapibus nisi, at rutrum felis metus maximus ex? Curabitur mattis nisi nec molestie pharetra? Cras aliquet gravida eros sit amet hendrerit? Cras placerat, justo ac porta imperdiet; purus metus sagittis justo, id finibus dolor purus et dolor."], ["updated_at", "2017-09-10 11:42:11.870370"], ["id", 1]]
+  [1m[35m (0.6ms)[0m  COMMIT
+Redirected to http://localhost:3000/portfolios
+Completed 302 Found in 9ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/portfolios" for ::1 at 2017-09-10 17:12:11 +0530
+Processing by PortfoliosController#index as HTML
+  [1m[36mPortfolio Load (0.5ms)[0m  [1mSELECT "portfolios".* FROM "portfolios"[0m
+  Rendered portfolios/index.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 41ms (Views: 40.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/portfolios" for ::1 at 2017-09-10 17:13:57 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PortfoliosController#index as HTML
+  [1m[35mPortfolio Load (0.6ms)[0m  SELECT "portfolios".* FROM "portfolios"
+  Rendered portfolios/index.html.erb within layouts/application (16.6ms)
+Completed 200 OK in 290ms (Views: 273.6ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/portfolios/2" for ::1 at 2017-09-10 17:14:04 +0530
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPortfolio Load (0.3ms)[0m  [1mSELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT 1[0m  [["id", 2]]
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.6ms)
+
+ActionView::MissingTemplate (Missing template portfolios/show, application/show with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/navdeepkumar/Desktop/portfolio/app/views"
+):
+  actionview (4.2.9) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.2.9) lib/action_view/lookup_context.rb:121:in `find'
+  actionview (4.2.9) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.2.9) lib/action_view/renderer/template_renderer.rb:40:in `determine_template'
+  actionview (4.2.9) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.2.9) lib/action_view/renderer/renderer.rb:46:in `render_template'
+  actionview (4.2.9) lib/action_view/renderer/renderer.rb:27:in `render'
+  actionview (4.2.9) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.9) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.9) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.9) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.9) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.9) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.9) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.9) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.9) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/navdeepkumar/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/benchmark.rb:308:in `realtime'
+  activesupport (4.2.9) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.9) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.9) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.9) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.9) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.9) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.9) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.9) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.9) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.9) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.9) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.9) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.9) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.9) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.9) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.9) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.9) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.9) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.9) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.9) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.9) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.9) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.9) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.9) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.9) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.9) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.9) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.9) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.9) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.9) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.9) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.9) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.9) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.9) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.9) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.9) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  rack (1.6.8) lib/rack/etag.rb:24:in `call'
+  rack (1.6.8) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.8) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.9) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.9) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.8) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.8) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.9) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.9) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.9) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.9) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.9) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.9) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.9) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.9) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.9) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.9) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.9) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.9) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.9) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.9) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.9) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.9) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.9) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.9) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.9) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.9) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.9) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.9) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.9) lib/rails/engine.rb:518:in `call'
+  railties (4.2.9) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/navdeepkumar/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/navdeepkumar/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/navdeepkumar/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/navdeepkumar/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.9ms)
+  Rendered /Users/navdeepkumar/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.6ms)
+  Rendered /Users/navdeepkumar/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/navdeepkumar/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (81.2ms)
+  Rendered /Users/navdeepkumar/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/navdeepkumar/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/navdeepkumar/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/navdeepkumar/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/navdeepkumar/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (65.9ms)
+  Rendered /Users/navdeepkumar/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/navdeepkumar/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/navdeepkumar/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (144.0ms)
+
+
+Started GET "/portfolios" for ::1 at 2017-09-10 17:14:12 +0530
+Processing by PortfoliosController#index as HTML
+  [1m[35mPortfolio Load (0.4ms)[0m  SELECT "portfolios".* FROM "portfolios"
+  Rendered portfolios/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 28ms (Views: 27.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/portfolios" for ::1 at 2017-09-10 17:14:53 +0530
+Processing by PortfoliosController#index as HTML
+  [1m[36mPortfolio Load (0.4ms)[0m  [1mSELECT "portfolios".* FROM "portfolios"[0m
+  Rendered portfolios/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 31ms (Views: 30.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/portfolios" for ::1 at 2017-09-10 17:15:01 +0530
+Processing by PortfoliosController#index as HTML
+  [1m[35mPortfolio Load (0.5ms)[0m  SELECT "portfolios".* FROM "portfolios"
+  Rendered portfolios/index.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 44ms (Views: 43.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/portfolios/2" for ::1 at 2017-09-10 17:15:03 +0530
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPortfolio Load (0.4ms)[0m  [1mSELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered portfolios/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 37ms (Views: 35.6ms | ActiveRecord: 0.4ms)
