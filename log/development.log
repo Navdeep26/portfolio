@@ -1688,3 +1688,148 @@ Processing by BlogsController#edit as HTML
   Rendered blogs/_form.html.erb (13.7ms)
   Rendered blogs/edit.html.erb within layouts/application (16.4ms)
 Completed 200 OK in 44ms (Views: 39.1ms | ActiveRecord: 0.9ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddPostStatusToBlogs (20170911052447)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (70.0ms)[0m  [1mALTER TABLE "blogs" ADD "status" integer DEFAULT 0[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20170911052447"]]
+  [1m[36m (1.8ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (2.3ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'blogs'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.7ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'friendly_id_slugs'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (2.4ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'portfolios'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (2.0ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'skills'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mBlog Exists (0.6ms)[0m  SELECT  1 AS one FROM "blogs" WHERE ("blogs"."id" IS NOT NULL) AND "blogs"."slug" = $1 LIMIT 1  [["slug", "aqbjhwjxdw"]]
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "blogs" ("title", "body", "slug", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "aqbjhwjxdw"], ["body", "wsceceded"], ["slug", "aqbjhwjxdw"], ["created_at", "2017-09-11 05:39:36.323924"], ["updated_at", "2017-09-11 05:39:36.323924"]]
+  [1m[35m (0.7ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mBlog Exists (0.4ms)[0m  SELECT  1 AS one FROM "blogs" WHERE ("blogs"."id" IS NOT NULL) AND "blogs"."slug" = $1 LIMIT 1  [["slug", "aqbjhwjxdw"]]
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "blogs" ("title", "body", "slug", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "aqbjhwjxdw"], ["body", "wscecwdwefefwdwww"], ["slug", "aqbjhwjxdw-8ee0998c-a649-45b8-8124-dba3a214f480"], ["created_at", "2017-09-11 05:42:07.327550"], ["updated_at", "2017-09-11 05:42:07.327550"]]
+  [1m[35m (0.7ms)[0m  COMMIT
+
+
+Started GET "/blogs/my-blog-post-1" for ::1 at 2017-09-11 11:15:16 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"my-blog-post-1"}
+  [1m[35mBlog Load (0.5ms)[0m  SELECT  "blogs".* FROM "blogs" WHERE "blogs"."slug" = $1  ORDER BY "blogs"."id" ASC LIMIT 1  [["slug", "my-blog-post-1"]]
+  Rendered blogs/show.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 245ms (Views: 215.3ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/blogs" for ::1 at 2017-09-11 11:15:18 +0530
+Processing by BlogsController#index as HTML
+  [1m[36mBlog Load (0.6ms)[0m  [1mSELECT "blogs".* FROM "blogs"[0m
+  Rendered blogs/index.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 32ms (Views: 30.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2017-09-11 11:15:20 +0530
+Processing by PagesController#home as HTML
+  [1m[35mBlog Load (0.4ms)[0m  SELECT "blogs".* FROM "blogs"
+  [1m[36mSkill Load (0.4ms)[0m  [1mSELECT "skills".* FROM "skills"[0m
+  Rendered pages/home.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 45ms (Views: 40.8ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/blogs" for ::1 at 2017-09-11 11:15:28 +0530
+Processing by BlogsController#index as HTML
+  [1m[35mBlog Load (0.4ms)[0m  SELECT "blogs".* FROM "blogs"
+  Rendered blogs/index.html.erb within layouts/application (14.2ms)
+Completed 200 OK in 44ms (Views: 43.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/blogs/my-blog-post-3/edit" for ::1 at 2017-09-11 11:15:32 +0530
+Processing by BlogsController#edit as HTML
+  Parameters: {"id"=>"my-blog-post-3"}
+  [1m[36mBlog Load (0.3ms)[0m  [1mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."slug" = $1  ORDER BY "blogs"."id" ASC LIMIT 1[0m  [["slug", "my-blog-post-3"]]
+  Rendered blogs/_form.html.erb (24.6ms)
+  Rendered blogs/edit.html.erb within layouts/application (32.6ms)
+Completed 200 OK in 62ms (Views: 58.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/blogs/my-blog-post-3" for ::1 at 2017-09-11 11:15:36 +0530
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"my-blog-post-3"}
+  [1m[35mBlog Load (2.6ms)[0m  SELECT  "blogs".* FROM "blogs" WHERE "blogs"."slug" = $1  ORDER BY "blogs"."id" ASC LIMIT 1  [["slug", "my-blog-post-3"]]
+  Rendered blogs/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 27ms (Views: 22.0ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/blogs" for ::1 at 2017-09-11 11:15:39 +0530
+Processing by BlogsController#index as HTML
+  [1m[36mBlog Load (0.4ms)[0m  [1mSELECT "blogs".* FROM "blogs"[0m
+  Rendered blogs/index.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 39ms (Views: 37.4ms | ActiveRecord: 0.4ms)
+  [1m[36mBlog Load (0.8ms)[0m  [1mSELECT  "blogs".* FROM "blogs"  ORDER BY "blogs"."id" DESC LIMIT 1[0m
+  [1m[35mBlog Load (0.8ms)[0m  SELECT  "blogs".* FROM "blogs"  ORDER BY "blogs"."id" DESC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "blogs" SET "status" = $1, "updated_at" = $2 WHERE "blogs"."id" = $3  [["status", 1], ["updated_at", "2017-09-11 05:47:33.278686"], ["id", 13]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+  [1m[35mBlog Load (0.7ms)[0m  SELECT  "blogs".* FROM "blogs"  ORDER BY "blogs"."id" DESC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mBlog Exists (0.2ms)[0m  SELECT  1 AS one FROM "blogs" WHERE ("blogs"."id" IS NOT NULL) AND "blogs"."slug" = $1 LIMIT 1  [["slug", "aqbjhwjxdw"]]
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "blogs" ("title", "body", "slug", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "aqbjhwjxdw"], ["body", "wscecwdwefefwdwww"], ["slug", "aqbjhwjxdw-6c2b0cc4-285e-411c-93d6-638b9ba31f21"], ["created_at", "2017-09-11 05:53:53.916111"], ["updated_at", "2017-09-11 05:53:53.916111"]]
+  [1m[35m (0.7ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mBlog Exists (0.6ms)[0m  SELECT  1 AS one FROM "blogs" WHERE ("blogs"."id" IS NOT NULL) AND "blogs"."slug" = $1 LIMIT 1  [["slug", "ruby"]]
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "blogs" ("title", "body", "slug", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "ruby"], ["body", "asdfasdf"], ["slug", "ruby"], ["created_at", "2017-09-11 05:54:40.878640"], ["updated_at", "2017-09-11 05:54:40.878640"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36mBlog Load (0.9ms)[0m  [1mSELECT  "blogs".* FROM "blogs"  ORDER BY "blogs"."id" DESC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "blogs" SET "status" = $1, "updated_at" = $2 WHERE "blogs"."id" = $3[0m  [["status", 1], ["updated_at", "2017-09-11 05:56:17.898848"], ["id", 15]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36mBlog Load (0.7ms)[0m  [1mSELECT  "blogs".* FROM "blogs"  ORDER BY "blogs"."id" DESC LIMIT 1[0m
+  [1m[36mBlog Load (1.4ms)[0m  [1mSELECT  "blogs".* FROM "blogs"  ORDER BY "blogs"."id" DESC LIMIT 1[0m
+  [1m[35mBlog Load (0.7ms)[0m  SELECT  "blogs".* FROM "blogs"  ORDER BY "blogs"."id" DESC LIMIT 1
+  [1m[36mBlog Load (0.9ms)[0m  [1mSELECT  "blogs".* FROM "blogs"  ORDER BY "blogs"."id" DESC LIMIT 1[0m
+  [1m[35mBlog Load (0.3ms)[0m  SELECT "blogs".* FROM "blogs" WHERE "blogs"."status" = $1  [["status", 1]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mBlog Exists (0.2ms)[0m  SELECT  1 AS one FROM "blogs" WHERE ("blogs"."id" IS NOT NULL) AND "blogs"."slug" = $1 LIMIT 1  [["slug", "rails"]]
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "blogs" ("title", "body", "slug", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "rails"], ["body", "asdfasdf"], ["slug", "rails"], ["created_at", "2017-09-11 08:05:31.042100"], ["updated_at", "2017-09-11 08:05:31.042100"]]
+  [1m[35m (0.7ms)[0m  COMMIT
