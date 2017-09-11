@@ -1,6 +1,7 @@
 class PortfoliosController < ApplicationController
   def index
     @portfolio_items = Portfolio.all
+    @id = params[:id]
   end
 
   def new

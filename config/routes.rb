@@ -1,15 +1,11 @@
 Rails.application.routes.draw do
   resources :portfolios
-  get 'pages/home' => "pages#home"
+  root "pages#home"
 
-  get 'pages/about' => "pages#about"
+  get 'about' => "pages#about"
 
-  get 'pages/contact' => "pages#contact"
-
+  get 'contact' => "pages#contact"  # See how all your routes lay out with "rake routes".
   resources :blogs
-  # The priority is based upon order of creation: first created -> highest priority.
-  # See how all your routes lay out with "rake routes".
-
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 
@@ -24,11 +20,6 @@ Rails.application.routes.draw do
 
   # Example resource route with options:
   #   resources :products do
-  #     member do
-  #       get 'short'
-  #       post 'toggle'
-  #     end
-  #
   #     collection do
   #       get 'sold'
   #     end
